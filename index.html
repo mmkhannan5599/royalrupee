@@ -27,14 +27,12 @@
       display: block;
       width: 100%;
       height: auto;
-      border: 0;
     }
 
     .mobile-image {
       display: none;
     }
 
-    /* MOBILE */
     @media (max-width: 768px) {
       .desktop-image {
         display: none;
@@ -42,8 +40,6 @@
 
       .mobile-image {
         display: block;
-        width: 100%;
-        height: auto;
       }
     }
   </style>
@@ -51,14 +47,17 @@
 
 <body>
 
-  <picture>
-    <source media="(max-width: 768px)" srcset="royal-rupee-mobile.png">
-    <img
-      class="desktop-image"
-      src="royal-rupee-hero.png"
-      alt="Royal Rupee - Building Trust. Creating Value."
-    >
-  </picture>
+  <img
+    class="desktop-image"
+    src="royal-rupee-hero.png"
+    alt="Royal Rupee"
+  >
+
+  <img
+    class="mobile-image"
+    src="royal-rupee-mobile.png"
+    alt="Royal Rupee Mobile"
+  >
 
 </body>
 </html>
