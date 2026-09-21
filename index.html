@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Royal Rupee | M.M Kannan</title>
 
   <style>
@@ -13,12 +12,9 @@
       box-sizing: border-box;
     }
 
-    html,
-    body {
+    html, body {
       width: 100%;
       min-height: 100%;
-      margin: 0;
-      padding: 0;
       background: #00131b;
     }
 
@@ -26,31 +22,43 @@
       overflow-x: hidden;
     }
 
-    .royal-rupee-page {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .royal-rupee-page img {
+    .desktop-image,
+    .mobile-image {
       display: block;
       width: 100%;
       height: auto;
-      margin: 0;
-      padding: 0;
       border: 0;
+    }
+
+    .mobile-image {
+      display: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .desktop-image {
+        display: none;
+      }
+
+      .mobile-image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <main class="royal-rupee-page">
+  <picture>
+    <source media="(max-width: 768px)" srcset="royal-rupee-mobile.png">
     <img
+      class="desktop-image"
       src="royal-rupee-hero.png"
       alt="Royal Rupee - Building Trust. Creating Value."
     >
-  </main>
+  </picture>
 
 </body>
 </html>
